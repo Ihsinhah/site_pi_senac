@@ -1,0 +1,188 @@
+/* all doc */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* body style */
+
+body {
+    margin: 0px;
+}
+
+/* font for section */
+.font-null {
+    font-size: 0;
+}
+/* logo image */
+.logotipo {
+  max-width: 150px;
+  border-radius: 100px;
+}
+
+/* navbar style */
+
+nav {
+    display: flex;
+    background-color: #bd0075;
+    padding-left: 60px;
+    width: 100;
+}
+
+nav, ul {
+    display: flex;
+    list-style-type: none;
+    gap: 30px; 
+    
+}
+
+nav, a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  /* background-color: #9e0061;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 15px;
+  border-radius: 5px; */
+}
+
+.login-color-word {
+    color: #bc0075;
+}
+
+/* contact letter */
+.contact {
+    font-size: 15px;
+    color: #bc0075;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: last baseline;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+/* search bar */
+.search-bar {
+    display: flex;
+    border: solid 2px #bd0075;
+    border-radius: 20px;
+    padding: 5px;
+}
+.search-icon {
+    display: flex;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    transform: rotateY(180deg);
+}
+
+.search-icon img {
+    width: 20px;
+}
+
+.search-input {
+    display: flex;
+    box-shadow: 0;
+    border: 0;
+    outline: 0;
+}
+
+/* carousel container */
+.slide-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(211, 148, 197, 0.579);
+}
+
+.dot-center {
+    text-align: center;
+}
+
+/* next and previous buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* next button to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* black background on hover animation */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* dots */
+.dot {
+  height: 5px;
+  width: 20px;
+  border-radius: 5px;
+  margin: 0 2px;
+  background-color: #ffd4fd;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #ff73c9bb;
+}
+
+/* transition animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+} */
+
+/* content */
+.content {
+  margin: 50px 150px 0px 150px; /*top, right, bottom, left margin*/
+}
+
+/* footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 10px;
+  background: #bd0075;
+  color: white;
+  position: absolute;
+  font-size: 8px;
+  left:0;
+  right: 0;
+  bottom: 0;
+    
+}
