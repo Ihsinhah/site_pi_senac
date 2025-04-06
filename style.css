@@ -1,0 +1,365 @@
+/* Main config */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+input[type="search"]::-webkit-search-cancel-button{
+    display: none;
+}
+
+
+body {
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.font-null {
+    font-size: 0;
+}
+
+.flexbox {
+    display: flex;
+}
+
+/* h2.h2-title {
+    color: white;
+    padding: 40px 0;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.532);
+}
+
+h2.h2-title span {
+    color: #3a02b4;
+    text-shadow: 0px 0px 5px #290080;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    box-shadow: 0px 0px 8px #6219ff;
+} */
+
+/* ////////////////////////////////////////////////////// */
+
+/* header */
+header>.interface {
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+    justify-content: space-between;
+}
+
+header {
+    padding: 40px 4%;
+}
+
+header .contact-header {
+    color: #bd0075;
+}
+header .contact-header a{
+    text-decoration: none;
+    color: #bd0075;
+}
+
+
+header .search-bar {
+    border: 2px solid #bd0075;
+    border-radius: 15px;
+    padding: 5px 9px;
+}
+
+header .search-bar input {
+    box-shadow: 0;
+    border: 0;
+    outline: 0;
+}
+
+header .search-bar i {
+    color: #bd0075;
+}
+
+header .login {
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header .login a {
+    text-decoration: none;
+    color: #bd0075;
+}
+
+header .login i {
+    color: #bd0075;
+    font-size: 30px;
+}
+
+header .header-logo img{
+    border-radius: 100%;
+}
+
+/* end header */
+
+/* ///////////////////////////////////////////////// */
+
+/* top nav */
+
+.top .desktop .flexbox {
+    background-color: #bd0075;
+    padding: 15px 80px;
+}
+
+.top nav.desktop a{
+    display: inline-block;
+    transition: 0.2s;
+    color: rgba(255, 255, 255, 0.478);
+    text-decoration: none;
+}
+
+.top nav.desktop a:hover{
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.532);
+}
+
+.top nav.desktop ul {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.top nav.desktop ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 20px;
+}
+
+.top nav.desktop ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    transition: 0.2s;
+}
+.top .desktop .flexbox ul li a:hover{
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.532);
+    transform: scale(1.05);
+}
+
+/* end top nav */
+
+/* /////////////////////////////////////////////// */
+
+/* carousel container */
+.slide-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(211, 148, 197, 0.579);
+}
+
+.dot-center {
+    text-align: center;
+}
+
+/* next and previous buttons */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* next button to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* black background on hover animation */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* dots */
+.dot {
+    height: 5px;
+    width: 20px;
+    border-radius: 5px;
+    margin: 0 2px;
+    background-color: #ffd4fd;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #ff73c9bb;
+}
+
+/* transition animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* /////////////////////////////////////////////////////// */
+
+/* works */
+
+section.works{
+    cursor: default; 
+    padding: 80px 4%;
+    box-shadow: 0px 0px 40px 10px #bd007529;
+}
+
+section.works h1{
+    color: #bd0075;
+    font-size: 30px;
+}
+
+section.works .flexbox{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+    border: solid 2px #bd007585;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+}
+
+.overlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #bd007591;
+    border-radius: 40px;
+    color: white;
+    opacity: 0;
+    transition: 0.2s;
+}
+.overlay:hover{
+    opacity: 1;
+}
+
+/*end works */
+
+/* /////////////////////////////////////////// */
+@media screen and (max-width: 1280px){
+    /* header */
+    header .interface{
+        font-size: 13px;
+    }
+
+    header .interface .header-logo img{
+        width: 160px;
+    }
+    
+    /* works */
+    section.works {
+        padding: 80px 8%;
+    }
+
+    section.works .interface .flexbox{
+        gap: 50px;
+        flex-direction: column;
+    }
+
+    .img-port{
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+}
+
+@media screen and (max-width: 800px){
+    header .interface .contact-header{
+        font-size: 11px;
+    }
+
+    header .interface .search-bar{
+        display: none;
+    }
+
+    header .interface .header-logo img{
+        width: 100px;
+    }
+
+    /* nav */
+
+    section.top .desktop .flexbox{
+        display: none;
+    }
+
+    /* works */
+
+    section.works .interface h1{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 415px){
+    /* header */
+    header .interface .header-logo img{
+        width: 100px;
+    }
+
+    header .interface .login.flexbox{
+        font-size: 12px;
+    }
+
+    header .interface .contact-header{
+        font-size: 12px;
+    }
+
+    header .interface .login.flexbox a{
+        display: none;
+    }
+    header .interface .login.flexbox i{
+        border: 2px solid;
+        padding: 5px;
+        border-radius: 5px;
+    }
+}
+
