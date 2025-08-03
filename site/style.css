@@ -7,9 +7,9 @@
 }
 
 
-input[type="search"]::-webkit-search-cancel-button{
+/* input[type="search"]::-webkit-search-cancel-button{
     display: none;
-}
+} */
 
 
 body {
@@ -51,27 +51,36 @@ button:hover {
 /* ////////////////////////////////////////////////////// */
 
 /* header */
-header>.interface {
+header > .interface {
     display: flex;
     justify-content: center;
     align-items: last baseline;
-    justify-content: space-between;
+    justify-content: space-around;
+    
 }
 
 header {
     padding: 40px 4%;
+    background-image: url();
 }
 
 header .contact-header {
     color: #bd0075;
 }
+
+header .interface .contact-header p{
+    padding-bottom: 15px;
+    font-size: 17px;    
+}
+
 header .contact-header a{
     text-decoration: none;
     color: #bd0075;
+
 }
 
 
-header .search-bar {
+/* header .search-bar {
     border: 2px solid #bd0075;
     border-radius: 15px;
     padding: 5px 9px;
@@ -85,7 +94,7 @@ header .search-bar input {
 
 header .search-bar i {
     color: #bd0075;
-}
+} */
 
 header .login {
     flex-wrap: wrap;
@@ -95,9 +104,10 @@ header .login {
 header .login a {
     text-decoration: none;
     color: #bd0075;
+    font-size: 17px;
 }
 
-header .login i {
+header .login i{
     color: #bd0075;
     font-size: 30px;
 }
@@ -106,7 +116,93 @@ header .header-logo img{
     border-radius: 100%;
 }
 
+header i.list-icon{
+    font-size: 45px;
+    color: #bd0075;
+    display: none;
+    transition: 0.5s;
+}
+
+header i.list-icon:hover{
+    transform: rotate(-90deg);
+    transition: 0.5s;
+}
+
 /* end header */
+
+/* /////////////////////////////////////////////// */
+
+/* menu-mobile */
+
+.menu-mobile{
+    background-color: #bd00752c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 0%;
+    z-index: 999999;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.menu-mobile.open-menu{
+    width: 50%;
+}
+
+.menu-mobile.open-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile nav ul{
+    list-style-type: none;
+    text-align: left;
+}
+
+.menu-mobile nav ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    padding: 20px 8%;
+    transition: 0.4s;
+}
+.menu-mobile nav ul li a:hover{
+    background-color: #bd0075;
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+.menu-mobile i{
+    display: flex;
+    justify-content: end;
+    padding: 30px 4%;
+    font-size: 30px;
+    color: #bd0075;
+    transition: 0.5s;
+}
+
+
+.menu-mobile i:hover{
+    transition: 0.5s;
+    text-shadow: 0 0 2px #ff21aa;
+    color: #ffffff;
+}
+
+.overlay-menu{
+    z-index: 88888;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #0000009f;
+    display: none;
+}
+
+
+/* end menu-mobile */
 
 /* ///////////////////////////////////////////////// */
 
@@ -127,7 +223,6 @@ header .header-logo img{
 .top nav.desktop a:hover{
     color: rgb(255, 255, 255);
     transform: scale(1.05);
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.532);
 }
 
 .top nav.desktop ul {
@@ -150,8 +245,22 @@ header .header-logo img{
     transition: 0.2s;
 }
 .top .desktop .flexbox ul li a:hover{
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.532);
     transform: scale(1.05);
+}
+
+/* navbar fixed */
+
+.top .flexbox.fixed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 1000;
+    background-color: #bd007586;
 }
 
 /* end top nav */
@@ -165,6 +274,10 @@ header .header-logo img{
     align-items: center;
     text-align: center;
     background-color: rgba(211, 148, 197, 0.579);
+}
+
+.slide-container img{
+    width: 100%;
 }
 
 .dot-center {
@@ -230,20 +343,20 @@ header .header-logo img{
 
 /* /////////////////////////////////////////////////////// */
 
-/* works */
+/* trabalhos */
 
-section.works{
+section.trab{
     cursor: default; 
     padding: 80px 4%;
     box-shadow: 0px 0px 40px 10px #bd007529;
 }
 
-section.works h1{
+section.trab h1{
     color: #bd0075;
     font-size: 30px;
 }
 
-section.works .flexbox{
+section.trab .flexbox{
     justify-content: space-around;
     margin-top: 60px;
 }
@@ -257,10 +370,12 @@ section.works .flexbox{
     border-radius: 40px;
     position: relative;
     border: solid 2px #bd007585;
+    transition: 0.4s;
 }
 
 .img-port:hover{
     background-position: 100% 100%;
+    cursor: default; 
 }
 
 .overlay{
@@ -275,16 +390,111 @@ section.works .flexbox{
     background-color: #bd007591;
     border-radius: 40px;
     color: white;
+    font-size: 30px;
     opacity: 0;
-    transition: 0.2s;
+    transition: 0.4s;
+    
 }
 .overlay:hover{
     opacity: 1;
 }
 
-/*end works */
+
+/*end trabalhos */
 
 /* /////////////////////////////////////////// */
+
+/* sobre */
+
+section.sobre{
+    cursor: default; 
+    padding: 80px 4%;
+    box-shadow: 0px 0px 40px 10px #bd007529;
+}
+
+section.sobre .interface h2{
+    color: #bd0075;
+    font-size: 30px;
+}
+
+section.sobre .interface .flexbox{
+    justify-content: space-around;
+    margin-top: 60px;
+    padding: 50px;
+    background-color: #ffd4fd41;
+    margin-left: 0;
+    border-radius: 50px 2px 50px 2px;
+}
+
+section.sobre .interface .flexbox p{
+    padding-bottom: 10px;
+    color: #bd00759c;
+}
+/*end sobre */
+/* //////////////////////////////////////////////////////////////// */
+
+/* footer */
+
+footer{
+    cursor: default; 
+    padding: 80px 4%;
+    box-shadow: 0px 0px 40px 10px #bd007529;
+    background-color: #ffd4fd41;
+}
+
+footer h2{
+    color: #bd0075;
+    font-size: 30px;
+}
+
+footer .interface .flexbox{  
+    margin-top: 60px;
+    gap: 20px;
+}
+
+footer .interface .flexbox .contato{
+    font-size: 16px;
+    color: #bd0075;
+}
+
+footer .interface .flexbox .contato a{
+    text-decoration: none;
+    color: #bd0075;
+}
+footer .interface .flexbox .contato i{
+    padding-right: 10px;
+    font-size: 23px;
+}
+
+footer .interface .texto{
+    text-align: center;
+    padding-top: 40px;
+    color: #bd0075;
+    font-size: 14px;
+}
+
+footer .interface .texto p{
+        padding-bottom: 10px;
+}
+
+footer .interface .texto a{
+    text-decoration: none;
+    color: #bd0075;
+    
+}
+
+footer .interface .texto a:hover{
+    text-transform: uppercase;
+}
+
+
+/* end footer */
+/* //////////////////////////////////////////////////////////////// */
+
+
+
+/* Primeira tela */
+/* ///////////////////////////////////////////// */
 @media screen and (max-width: 1280px){
     /* header */
     header .interface{
@@ -294,28 +504,59 @@ section.works .flexbox{
     header .interface .header-logo img{
         width: 160px;
     }
+
+    header .login a {
+    font-size: 15px;
+}
+
+header .interface .contact-header p{
+    font-size: 15px;    
+}
+    
     
     /* works */
-    section.works {
+    section.trab {
         padding: 80px 8%;
     }
 
-    section.works .interface .flexbox{
+    section.trab .interface .flexbox{
         gap: 50px;
         flex-direction: column;
     }
 
+    section.trab .interface h1{
+        text-align: center;
+    }
+
     .img-port{
+        width: 260;
+        height: 390px;
         width: 100%;
         max-width: 300px;
         margin: 0 auto;
     }
-    
+
+
+
 }
 
-@media screen and (max-width: 800px){
+    
+/* Segunda tela */
+/* ///////////////////////////////////////////// */
+
+@media screen and (max-width: 799px){
+
+    /* mobile button display */
+    header i.list-icon{
+        display: block;
+        position: fixed;
+    }
+
+    /* header*/ 
+
     header .interface .contact-header{
         font-size: 11px;
+        padding-left: 40px;
     }
 
     header .interface .search-bar{
@@ -326,23 +567,89 @@ section.works .flexbox{
         width: 100px;
     }
 
-    /* nav */
+    header .login a {
+    font-size: 12px;
+}
 
+header .interface .contact-header p{
+    font-size: 12px;    
+}
+    
+
+    /* nav */
     section.top .desktop .flexbox{
         display: none;
     }
 
     /* works */
 
-    section.works .interface h1{
+    section.trab .interface h1{
         text-align: center;
     }
+
+    footer .interface .flexbox{
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*  */
+    header > .interface {
+    justify-content: space-between;
+    
 }
+
+    header i.list-icon{
+        font-size: 35px;
+    }
+
+    
+    
+}
+
+/* Terceira tela */
+/* ///////////////////////////////////////////// */
+
+@media screen and (max-width: 524px){
+
+    header {
+    padding: 20px 5%;
+    
+    }
+
+
+    header .interface .login.flexbox p{
+        display: none;
+    }
+
+    header i.list-icon{
+        font-size: 35px;
+    }
+
+    header .header-logo img{
+    margin-top: 10px;
+}
+
+    header .interface .login.flexbox i{
+        display: none;
+    }
+
+    header i.list-icon{
+        font-size: 35px;
+    }
+
+    header .interface .contact-header p{
+    font-size: 15px;    
+}
+    
+}
+
+/* Quarta tela */
+/* ///////////////////////////////////////////// */
 
 @media screen and (max-width: 415px){
     /* header */
     header .interface .header-logo img{
-        width: 100px;
+        width: 80px;
     }
 
     header .interface .login.flexbox{
@@ -350,16 +657,10 @@ section.works .flexbox{
     }
 
     header .interface .contact-header{
-        font-size: 12px;
+        font-size: 11px;
     }
 
-    header .interface .login.flexbox a{
-        display: none;
-    }
-    header .interface .login.flexbox i{
-        border: 2px solid;
-        padding: 5px;
-        border-radius: 5px;
-    }
 }
+
+
 
